@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCastBD Weather Blog Article</title>
+    <meta name="description" content="Read the latest SkyCastBD weather article.">
+    <meta name="keywords" content="Bangladesh weather, SkyCastBD, weather blog">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SkyCastBD Weather Blog Article">
+    <meta property="og:description" content="Read the latest SkyCastBD weather article.">
+    <meta property="og:image" content="https://www.skycastbd.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/glassmorphism.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-container">
+            <div class="logo"><a href="/index.html" aria-label="SkyCastBD home"><span>SkyCastBD</span></a></div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../pages/forecast.html" class="nav-link">Forecast</a></li>
+                <li><a href="../pages/about.html" class="nav-link">About</a></li>
+                <li><a href="index.html" class="nav-link active">Blog</a></li>
+                <li><a href="../pages/store.html" class="nav-link">Store</a></li>
+                <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+                    <span class="theme-toggle__thumb" aria-hidden="true">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+                    </span>
+                    <span class="theme-toggle__label" data-theme-label>Light</span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="blog-article" id="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+            <header>
+                <p class="blog-kicker">SkyCastBD Weather Blog</p>
+                <h1>Loading article...</h1>
+                <p class="blog-meta">Fetching published post from CMS.</p>
+            </header>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 SkyCastBD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/cms-api.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+    <script src="../js/blog-post.js" defer></script>
+</body>
+</html>

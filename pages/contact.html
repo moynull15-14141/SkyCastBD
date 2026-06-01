@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SkyCastBD | Weather Support</title>
+    <meta name="description" content="Contact SkyCastBD for weather platform support, partnerships, and feedback about Bangladesh weather forecasts and global city coverage.">
+    <meta name="keywords" content="contact SkyCastBD, Bangladesh weather support, weather forecast contact, global weather platform">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="/pages/contact.html">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/glassmorphism.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-container">
+            <div class="logo"><a href="/index.html" aria-label="SkyCastBD home"><span>SkyCastBD</span></a></div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="forecast.html" class="nav-link">Forecast</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+                    <span class="theme-toggle__thumb" aria-hidden="true">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+                    </span>
+                    <span class="theme-toggle__label" data-theme-label>Light</span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="weather-section">
+            <div class="container">
+                <div class="contact-heading">
+                    <h1>Contact Us</h1>
+                    <p class="section-description">Send feedback about Bangladesh weather coverage or global city support.</p>
+                </div>
+                <div class="glass-card contact-card">
+                    <form id="contactForm" class="contact-form">
+                        <div class="contact-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required minlength="2" maxlength="100" autocomplete="name" placeholder="Your full name">
+                        </div>
+                        <div class="contact-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required maxlength="160" autocomplete="email" placeholder="you@example.com">
+                        </div>
+                        <div class="contact-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required minlength="10" maxlength="2000" placeholder="How can we help with SkyCastBD?"></textarea>
+                        </div>
+                        <button type="submit" class="cta-btn contact-submit">Send Message</button>
+                        <p class="contact-status" id="contactStatus" role="status" aria-live="polite" hidden></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SkyCastBD</h3>
+                <p>Premium weather forecasting for Bangladesh and beyond</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SkyCastBD. All rights reserved. Made with 🌦️ in Bangladesh</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/cms-api.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+</body>
+</html>

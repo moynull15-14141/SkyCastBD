@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCastBD - Bangladesh & Global Weather Forecast | Real-Time Updates</title>
+    <meta name="description" content="SkyCastBD provides real-time Bangladesh weather forecast, Dhaka weather updates, rain alerts, air quality index, and global city weather tracking with a modern fast experience.">
+    <meta name="keywords" content="Bangladesh weather, Dhaka weather, Chattogram weather, Sylhet weather, Khulna weather, Cox's Bazar weather, live weather Bangladesh, weather forecast Bangladesh, air quality Bangladesh, global city weather, 7-day forecast">
+    <meta name="author" content="SkyCastBD">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <link rel="canonical" href="/index.html">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SkyCastBD">
+    <meta property="og:title" content="SkyCastBD - Bangladesh & Global Weather Forecast">
+    <meta property="og:description" content="Track Bangladesh weather and global city weather in real-time with 7-day forecasts, AQI insights, and a premium lightweight UI.">
+    <meta property="og:url" content="/index.html">
+    <meta property="og:image" content="/logo.png">
+    <meta property="og:image:alt" content="SkyCastBD weather forecasting platform logo">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SkyCastBD - Bangladesh & Global Weather Forecast">
+    <meta name="twitter:description" content="Live Bangladesh weather, AQI, and global city forecast in one fast weather platform.">
+    <meta name="twitter:image" content="/logo.png">
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+    <link rel="preconnect" href="https://air-quality-api.open-meteo.com" crossorigin>
+    <link rel="preconnect" href="https://geocoding-api.open-meteo.com" crossorigin>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/glassmorphism.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SkyCastBD",
+      "url": "https://example.com/",
+      "description": "Bangladesh-first weather platform with global city support and real-time forecast.",
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://example.com/index.html?city={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SkyCastBD",
+      "url": "https://example.com/",
+      "logo": "https://example.com/logo.png",
+      "sameAs": []
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Primary navigation">
+            <div class="nav-container">
+                <div class="logo"><a href="/index.html" aria-label="SkyCastBD home"><span>SkyCastBD</span></a></div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="pages/forecast.html" class="nav-link">Forecast</a></li>
+                    <li><a href="pages/about.html" class="nav-link">About</a></li>
+                    <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+                    <li><a href="pages/store.html" class="nav-link">Store</a></li>
+                    <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+                        <span class="theme-toggle__thumb" aria-hidden="true">
+                            <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+                            <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+                        </span>
+                        <span class="theme-toggle__label" data-theme-label>Light</span>
+                    </button>
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="particles-container" aria-hidden="true">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+            </div>
+
+            <div class="hero-background" aria-hidden="true">
+                <div class="gradient-blur grad-1" style="--top: 10%; --left: 20%;"></div>
+                <div class="gradient-blur grad-2" style="--top: 60%; --left: 80%;"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🌍</span>
+                    <span>Bangladesh-First Global Weather Platform</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-main">Bangladesh-first weather intelligence</span>
+                    <span class="title-highlight">with global coverage.</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Track real-time weather across Bangladesh and every major city worldwide. Powered by premium forecasting technology.
+                </p>
+
+                <div class="hero-search-container">
+                    <div class="search-wrapper">
+                        <div class="search-input-group">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            <input
+                                type="text"
+                                id="searchCity"
+                                class="search-input"
+                                placeholder="Search cities worldwide..."
+                                autocomplete="off"
+                                aria-label="Search weather by city"
+                            >
+                            <button class="search-btn primary-btn">
+                                <span>Search</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <polyline points="5 12 19 12"></polyline>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search-results-panel" id="searchResults" aria-live="polite"></div>
+                        <button class="geo-btn glass-button" id="geolocate" title="Detect your location" aria-label="Detect my location weather">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>My Location</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-ctas">
+                    <button class="cta-primary">Get Started Now</button>
+                    <button class="cta-secondary">Learn More</button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Cities Tracked</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Accuracy Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Real-time</span>
+                        <span class="stat-label">Updates</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-section" aria-labelledby="currentWeatherTitle">
+            <div class="container">
+                <h2 class="section-title" id="currentWeatherTitle">Current Weather</h2>
+                <div class="weather-loader" id="weatherLoader" hidden>
+                    <div class="loader-ring" aria-hidden="true"></div>
+                    <span>Loading weather...</span>
+                </div>
+                <div class="weather-error" id="weatherError" hidden></div>
+                <div class="weather-grid" id="weatherGrid"></div>
+            </div>
+        </section>
+
+        <section class="forecast-section" aria-labelledby="sevenDayForecastTitle">
+            <div class="container">
+                <h2 class="section-title" id="sevenDayForecastTitle">7-Day Forecast</h2>
+                <div class="forecast-cards" id="forecastCards"></div>
+            </div>
+        </section>
+
+        <section class="featured-section popular-cities-section" aria-labelledby="popularCitiesTitle">
+            <div class="container">
+                <div class="section-heading-text">
+                    <span class="section-kicker">Bangladesh weather</span>
+                    <h2 class="section-title" id="popularCitiesTitle">Popular Cities Weather</h2>
+                    <p class="section-description">
+                        Quick live weather for Bangladesh's most searched destinations. Select any city to update the full forecast above.
+                    </p>
+                </div>
+                <div class="cities-grid popular-cities-grid" id="popularCitiesGrid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="aqi-section" aria-labelledby="aqiTitle">
+            <div class="container">
+                <div class="aqi-header">
+                    <div>
+                        <span class="section-kicker">Air quality</span>
+                        <h2 class="section-title" id="aqiTitle">Bangladesh Air Quality Index</h2>
+                        <p class="section-description">
+                            Live AQI readings and health guidance for major Bangladesh cities, powered by Open-Meteo air quality data.
+                        </p>
+                    </div>
+                    <div class="aqi-scale" aria-label="AQI color scale">
+                        <span class="scale-good">Good</span>
+                        <span class="scale-moderate">Moderate</span>
+                        <span class="scale-unhealthy">Unhealthy</span>
+                    </div>
+                </div>
+                <div class="aqi-grid" id="aqiGrid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="alertsTitle">
+            <div class="cta-content">
+                <h2 id="alertsTitle">Stay Updated with Real-time Alerts</h2>
+                <p>Get weather notifications for Bangladesh's major cities</p>
+                <button class="cta-btn">Enable Notifications</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SkyCastBD</h3>
+                <p>Premium weather forecasting for Bangladesh and beyond</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="pages/forecast.html">Forecast</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                    <li><a href="pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SkyCastBD. All rights reserved. Made with 🌦️ in Bangladesh</p>
+        </div>
+    </footer>
+
+    <script src="js/weather-api.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

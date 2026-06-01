@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Weather Forecast | SkyCastBD Weather Intelligence</title>
+    <meta name="description" content="Explore a premium 7-day weather forecast dashboard for Bangladesh and major global cities with hourly forecasts, AQI, alerts, sunrise, sunset, and weather intelligence from SkyCastBD.">
+    <meta name="keywords" content="7-day forecast Bangladesh, SkyCastBD forecast, Dhaka weather forecast, Bangladesh weather dashboard, global city weather, hourly forecast, AQI Bangladesh">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="/pages/forecast.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/glassmorphism.css">
+</head>
+<body class="forecast-page">
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-container">
+            <div class="logo"><a href="/index.html" aria-label="SkyCastBD home"><span>SkyCastBD</span></a></div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="forecast.html" class="nav-link active">Forecast</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+                    <span class="theme-toggle__thumb" aria-hidden="true">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+                    </span>
+                    <span class="theme-toggle__label" data-theme-label>Light</span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="forecast-shell">
+        <div class="forecast-particles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <section class="forecast-hero forecast-section-block" aria-labelledby="forecastTitle">
+            <div class="forecast-container forecast-hero-grid">
+                <div class="forecast-hero-copy">
+                    <p class="forecast-kicker">Bangladesh-first global weather intelligence</p>
+                    <h1 id="forecastTitle">7-Day Weather Forecast</h1>
+                    <p class="forecast-subtitle">Explore detailed weather forecasts for Bangladesh and major global cities with real-time insights.</p>
+                    <div class="forecast-hero-actions" aria-label="Forecast quick actions">
+                        <a href="#forecastSearch" class="forecast-btn forecast-btn-primary">Search Forecast</a>
+                        <a href="#weeklyForecast" class="forecast-btn forecast-btn-ghost">View 7-Day Outlook</a>
+                    </div>
+                </div>
+
+                <article class="forecast-now-card premium-glass-card" aria-label="Current forecast snapshot">
+                    <div class="forecast-now-top">
+                        <div>
+                            <p class="forecast-card-label">Current city</p>
+                            <h2>Dhaka, Bangladesh</h2>
+                        </div>
+                        <span class="forecast-live-pill"><span></span> Live</span>
+                    </div>
+                    <div class="forecast-now-main">
+                        <div class="forecast-weather-orb forecast-weather-orb-storm" aria-hidden="true">
+                            <span class="orb-cloud"></span>
+                            <span class="orb-bolt">ϟ</span>
+                            <span class="orb-rain orb-rain-one"></span>
+                            <span class="orb-rain orb-rain-two"></span>
+                            <span class="orb-rain orb-rain-three"></span>
+                        </div>
+                        <div>
+                            <strong>31°C</strong>
+                            <p>Thunderstorm</p>
+                            <small>Updated 10 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="forecast-now-meta">
+                        <span>Feels like 36°C</span>
+                        <span>Rain 82%</span>
+                        <span>Wind 18 km/h</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="forecast-search-panel forecast-section-block" id="forecastSearch" aria-labelledby="forecastSearchTitle">
+            <div class="forecast-container">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="forecast-kicker">Find any location</p>
+                        <h2 id="forecastSearchTitle">Search weather intelligence worldwide</h2>
+                    </div>
+                    <p>Fast city lookup with Bangladesh favorites and global forecast shortcuts.</p>
+                </div>
+                <div class="hero-search-container forecast-search-card premium-glass-card">
+                    <div class="search-wrapper">
+                        <div class="search-input-group">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            <input
+                                type="text"
+                                id="searchCity"
+                                class="search-input"
+                                placeholder="Search cities worldwide..."
+                                autocomplete="off"
+                                aria-label="Search weather by city"
+                            >
+                            <button class="search-btn primary-btn forecast-btn forecast-btn-primary" type="button">
+                                <span>Search</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <polyline points="5 12 19 12"></polyline>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search-results-panel" id="searchResults" aria-live="polite"></div>
+                        <button class="geo-btn glass-button forecast-btn forecast-btn-ghost" id="geolocate" type="button" title="Detect your location" aria-label="Detect my location weather">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>My Location</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="forecast-search-status" id="weatherError" data-search-status aria-live="polite">Try Dhaka, London, Tokyo, or Cox’s Bazar.</div>
+                <div class="forecast-quick-links" aria-label="Popular city quick links">
+                    <button type="button" data-city="Dhaka">Dhaka</button>
+                    <button type="button" data-city="Sylhet">Sylhet</button>
+                    <button type="button" data-city="Chattogram">Chattogram</button>
+                    <button type="button" data-city="Cox's Bazar">Cox’s Bazar</button>
+                    <button type="button" data-city="London">London</button>
+                    <button type="button" data-city="Tokyo">Tokyo</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-dashboard forecast-section-block" aria-labelledby="currentDashboardTitle">
+            <div class="forecast-container">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="forecast-kicker">Live conditions</p>
+                        <h2 id="currentDashboardTitle">Current weather dashboard</h2>
+                    </div>
+                    <p>Premium real-time snapshot designed for travel, commute, agriculture, and urban planning decisions.</p>
+                </div>
+                <article class="forecast-dashboard-card premium-glass-card">
+                    <div class="forecast-dashboard-left">
+                        <div class="forecast-visual-slider forecast-visual-storm" data-forecast-visual aria-label="Weather matching image slider">
+                            <div class="forecast-visual-track">
+                                <figure class="forecast-visual-slide forecast-visual-slide-one"><span></span></figure>
+                                <figure class="forecast-visual-slide forecast-visual-slide-two"><span></span></figure>
+                                <figure class="forecast-visual-slide forecast-visual-slide-three"><span></span></figure>
+                            </div>
+                            <div class="forecast-visual-overlay">
+                                <div class="forecast-weather-orb forecast-weather-orb-large forecast-weather-orb-storm" aria-hidden="true">
+                                    <span class="orb-cloud"></span>
+                                    <span class="orb-bolt">ϟ</span>
+                                    <span class="orb-rain orb-rain-one"></span>
+                                    <span class="orb-rain orb-rain-two"></span>
+                                    <span class="orb-rain orb-rain-three"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-dashboard-summary">
+                            <p class="forecast-card-label">Dhaka now</p>
+                            <h3>31°C</h3>
+                            <p class="forecast-condition">Thunderstorm with rain</p>
+                            <span>Feels like 36°C</span>
+                        </div>
+                    </div>
+                    <div class="forecast-stats-grid">
+                        <div class="forecast-stat-card"><span>💧</span><p>Humidity</p><strong>78%</strong></div>
+                        <div class="forecast-stat-card"><span>🌬</span><p>Wind speed</p><strong>18 km/h</strong></div>
+                        <div class="forecast-stat-card"><span>☀</span><p>UV Index</p><strong>6 High</strong></div>
+                        <div class="forecast-stat-card"><span>◉</span><p>AQI</p><strong>74 Moderate</strong></div>
+                        <div class="forecast-stat-card"><span>↧</span><p>Pressure</p><strong>1004 hPa</strong></div>
+                        <div class="forecast-stat-card"><span>👁</span><p>Visibility</p><strong>7.8 km</strong></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="forecast-section-block" aria-labelledby="hourlyForecastTitle">
+            <div class="forecast-container">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="forecast-kicker">Next 12 hours</p>
+                        <h2 id="hourlyForecastTitle">Hourly forecast</h2>
+                    </div>
+                    <p>Swipe horizontally to explore changing temperature and rain probability.</p>
+                </div>
+                <div class="hourly-forecast-strip" aria-label="Hourly weather forecast">
+                    <article class="hourly-card"><time>Now</time><span>⛈</span><strong>31°</strong><small>82% rain</small></article>
+                    <article class="hourly-card"><time>12 PM</time><span>🌧</span><strong>30°</strong><small>76% rain</small></article>
+                    <article class="hourly-card"><time>1 PM</time><span>🌧</span><strong>30°</strong><small>71% rain</small></article>
+                    <article class="hourly-card"><time>2 PM</time><span>☁</span><strong>31°</strong><small>42% rain</small></article>
+                    <article class="hourly-card"><time>3 PM</time><span>⛅</span><strong>32°</strong><small>28% rain</small></article>
+                    <article class="hourly-card"><time>4 PM</time><span>🌦</span><strong>31°</strong><small>38% rain</small></article>
+                    <article class="hourly-card"><time>5 PM</time><span>🌧</span><strong>29°</strong><small>64% rain</small></article>
+                    <article class="hourly-card"><time>6 PM</time><span>☁</span><strong>28°</strong><small>35% rain</small></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-section-block" id="weeklyForecast" aria-labelledby="weeklyForecastTitle">
+            <div class="forecast-container">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="forecast-kicker">Weekly outlook</p>
+                        <h2 id="weeklyForecastTitle">7-day forecast</h2>
+                    </div>
+                    <p>Premium forecast cards with condition summaries, daily range, and precipitation risk.</p>
+                </div>
+                <div class="weekly-forecast-grid">
+                    <article class="weekly-card active"><span>Today</span><div>⛈</div><h3>Thunderstorm</h3><p>33° / 26°</p><small>82% rain chance</small></article>
+                    <article class="weekly-card"><span>Tue</span><div>🌧</div><h3>Heavy rain</h3><p>31° / 25°</p><small>78% rain chance</small></article>
+                    <article class="weekly-card"><span>Wed</span><div>☁</div><h3>Overcast</h3><p>32° / 26°</p><small>45% rain chance</small></article>
+                    <article class="weekly-card"><span>Thu</span><div>⛅</div><h3>Partly cloudy</h3><p>34° / 27°</p><small>24% rain chance</small></article>
+                    <article class="weekly-card"><span>Fri</span><div>☀</div><h3>Mainly clear</h3><p>35° / 28°</p><small>12% rain chance</small></article>
+                    <article class="weekly-card"><span>Sat</span><div>🌦</div><h3>Light shower</h3><p>33° / 27°</p><small>39% rain chance</small></article>
+                    <article class="weekly-card"><span>Sun</span><div>🌬</div><h3>Windy</h3><p>32° / 26°</p><small>18% rain chance</small></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-section-block" aria-labelledby="alertsTitle">
+            <div class="forecast-container">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="forecast-kicker">Risk monitoring</p>
+                        <h2 id="alertsTitle">Weather alerts</h2>
+                    </div>
+                    <p>Actionable alerts for Bangladesh divisions and coastal regions.</p>
+                </div>
+                <div class="forecast-alert-grid">
+                    <article class="forecast-alert-card alert-heavy-rain">
+                        <span class="alert-live-indicator" style="color: #d97706;"></span>
+                        <span>⚠ <span>Heavy rainfall expected in Sylhet tonight.</span></span>
+                    </article>
+                    <article class="forecast-alert-card alert-thunderstorm">
+                        <span class="alert-live-indicator" style="color: #ef4444;"></span>
+                        <span>⚠ <span>Thunderstorm warning for coastal regions.</span></span>
+                    </article>
+                    <article class="forecast-alert-card alert-heat">
+                        <span class="alert-live-indicator" style="color: #f97316;"></span>
+                        <span>⚠ <span>Heat alert in Rajshahi division.</span></span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-section-block forecast-two-column" aria-label="Air quality and sun moon details">
+            <div class="forecast-container forecast-split-grid">
+                <section aria-labelledby="aqiPanelTitle" class="premium-glass-card forecast-info-panel">
+                    <p class="forecast-kicker">Air quality</p>
+                    <h2 id="aqiPanelTitle">AQI health guidance</h2>
+                    <div class="aqi-premium-card"><strong>AQI 74</strong><span>Moderate</span><p>Safe for most people. Sensitive groups should reduce prolonged outdoor exertion.</p></div>
+                    <div class="aqi-premium-card"><strong>PM2.5</strong><span>25 µg/m³</span><p>Consider a mask near heavy traffic corridors during peak hours.</p></div>
+                </section>
+                <section aria-labelledby="sunMoonTitle" class="premium-glass-card forecast-info-panel">
+                    <p class="forecast-kicker">Astronomy</p>
+                    <h2 id="sunMoonTitle">Sun & moon</h2>
+                    <div class="sunmoon-grid">
+                        <div><span>🌅</span><p>Sunrise</p><strong>5:15 AM</strong></div>
+                        <div><span>🌇</span><p>Sunset</p><strong>6:42 PM</strong></div>
+                        <div><span>🌙</span><p>Moon phase</p><strong>Waxing gibbous</strong></div>
+                        <div><span>⌛</span><p>Daylight</p><strong>13h 27m</strong></div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="forecast-section-block" aria-labelledby="bdCitiesTitle">
+            <div class="forecast-container">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="forecast-kicker">Bangladesh cities</p>
+                        <h2 id="bdCitiesTitle">Regional weather grid</h2>
+                    </div>
+                    <p>Bangladesh-first city coverage for divisional and coastal weather awareness.</p>
+                </div>
+                <div class="city-weather-grid">
+                    <article class="city-weather-card"><h3>Dhaka</h3><span>⛈</span><strong>31°C</strong><p>Thunderstorm</p></article>
+                    <article class="city-weather-card"><h3>Sylhet</h3><span>🌧</span><strong>27°C</strong><p>Heavy rainfall</p></article>
+                    <article class="city-weather-card"><h3>Chattogram</h3><span>🌦</span><strong>30°C</strong><p>Rain showers</p></article>
+                    <article class="city-weather-card"><h3>Rajshahi</h3><span>☀</span><strong>36°C</strong><p>Hot and clear</p></article>
+                    <article class="city-weather-card"><h3>Khulna</h3><span>☁</span><strong>32°C</strong><p>Overcast</p></article>
+                    <article class="city-weather-card"><h3>Barisal</h3><span>🌧</span><strong>29°C</strong><p>Rain likely</p></article>
+                    <article class="city-weather-card"><h3>Rangpur</h3><span>⛅</span><strong>30°C</strong><p>Partly cloudy</p></article>
+                    <article class="city-weather-card"><h3>Cox’s Bazar</h3><span>🌬</span><strong>28°C</strong><p>Windy coast</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-section-block" aria-labelledby="globalCitiesTitle">
+            <div class="forecast-container">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="forecast-kicker">Global outlook</p>
+                        <h2 id="globalCitiesTitle">Major global cities</h2>
+                    </div>
+                    <p>Track international weather for travel, business, and family abroad.</p>
+                </div>
+                <div class="city-weather-grid global-city-grid">
+                    <article class="city-weather-card"><h3>London</h3><span>☁</span><strong>14°C</strong><p>Cloudy</p></article>
+                    <article class="city-weather-card"><h3>Tokyo</h3><span>🌦</span><strong>23°C</strong><p>Light showers</p></article>
+                    <article class="city-weather-card"><h3>Dubai</h3><span>☀</span><strong>39°C</strong><p>Sunny</p></article>
+                    <article class="city-weather-card"><h3>Singapore</h3><span>⛈</span><strong>29°C</strong><p>Storm nearby</p></article>
+                    <article class="city-weather-card"><h3>New York</h3><span>⛅</span><strong>21°C</strong><p>Partly cloudy</p></article>
+                    <article class="city-weather-card"><h3>Toronto</h3><span>🌬</span><strong>12°C</strong><p>Windy</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-section-block" aria-labelledby="insightsTitle">
+            <div class="forecast-container">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="forecast-kicker">Weather intelligence</p>
+                        <h2 id="insightsTitle">Insights & articles</h2>
+                    </div>
+                    <p>Editorial-style climate and safety guidance for smarter weekly planning.</p>
+                </div>
+                <div class="forecast-article-grid">
+                    <article class="forecast-article-card"><span>Travel</span><h3>Best travel weather this week</h3><p>Plan routes around rain windows and coastal wind conditions.</p></article>
+                    <article class="forecast-article-card"><span>Monsoon</span><h3>Monsoon update in Bangladesh</h3><p>Regional rainfall trends and flood risk signals for this week.</p></article>
+                    <article class="forecast-article-card"><span>Climate</span><h3>Weekly climate insights</h3><p>Temperature anomalies, humidity pressure, and city comparisons.</p></article>
+                    <article class="forecast-article-card"><span>Safety</span><h3>Heatwave safety guide</h3><p>Practical steps to reduce outdoor heat exposure and dehydration.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-cta-section forecast-section-block" aria-labelledby="forecastCtaTitle">
+            <div class="forecast-container">
+                <div class="forecast-cta-card premium-glass-card">
+                    <p class="forecast-kicker">SkyCastBD intelligence</p>
+                    <h2 id="forecastCtaTitle">Stay ahead with real-time weather intelligence.</h2>
+                    <p>Explore Bangladesh and global city forecasts with premium dashboards, risk alerts, and actionable insights.</p>
+                    <div class="forecast-hero-actions">
+                        <a href="#bdCitiesTitle" class="forecast-btn forecast-btn-primary">Explore Cities</a>
+                        <a href="#weeklyForecast" class="forecast-btn forecast-btn-ghost">View Live Forecast</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer forecast-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SkyCastBD</h3>
+                <p>Premium weather intelligence for Bangladesh and beyond.</p>
+                <div class="forecast-social-links" aria-label="Social links">
+                    <a href="#" aria-label="SkyCastBD on Facebook">Fb</a>
+                    <a href="#" aria-label="SkyCastBD on X">X</a>
+                    <a href="#" aria-label="SkyCastBD on LinkedIn">In</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SkyCastBD. All rights reserved. Made with 🌦️ in Bangladesh.</p>
+        </div>
+    </footer>
+
+    <script src="../js/weather-api.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>

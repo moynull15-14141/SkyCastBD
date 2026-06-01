@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCastBD Store | Weather Essentials & Offers</title>
+    <meta name="description" content="Shop SkyCastBD store products with manual bKash, Nagad, and DBBL payment checkout in Bangladesh.">
+    <meta name="keywords" content="SkyCastBD store, Bangladesh weather products, bKash checkout, Nagad checkout, DBBL payment">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skycastbd.vercel.app/pages/store.html">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/glassmorphism.css">
+</head>
+<body class="store-page">
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-container">
+            <div class="logo"><a href="/index.html" aria-label="SkyCastBD home"><span>SkyCastBD</span></a></div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="forecast.html" class="nav-link">Forecast</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                <li><a href="store.html" class="nav-link active">Store</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+                    <span class="theme-toggle__thumb" aria-hidden="true">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+                    </span>
+                    <span class="theme-toggle__label" data-theme-label>Light</span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="store-hero weather-section">
+            <div class="container store-hero-grid">
+                <div>
+                    <span class="hero-badge">SkyCastBD Direct Store</span>
+                    <h1>Weather-ready essentials with manual mobile payment checkout.</h1>
+                    <p class="section-description">Browse curated SkyCastBD products, pay through bKash, Nagad, or DBBL, then submit your transaction ID for manual verification.</p>
+                </div>
+                <aside class="glass-card payment-summary-card" aria-label="Payment account numbers">
+                    <h2>Payment Numbers</h2>
+                    <ul class="payment-number-list">
+                        <li><strong>bKash:</strong> <span>01745334044</span></li>
+                        <li><strong>Nagad:</strong> <span>01745334044</span></li>
+                        <li><strong>DBBL:</strong> <span>7017319729155</span></li>
+                    </ul>
+                    <p>Send payment first, then use Buy Now to submit the transaction ID.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="weather-section store-products-section" aria-labelledby="storeProductsTitle">
+            <div class="container">
+                <div class="section-heading-row">
+                    <div>
+                        <h2 id="storeProductsTitle">Available Products</h2>
+                        <p class="section-description">Discounted items show the original price crossed out and the active sale price highlighted.</p>
+                    </div>
+                </div>
+                <p class="store-status" id="storeStatus" hidden></p>
+                <div class="store-product-grid" id="storeProductGrid" aria-live="polite">
+                    <article class="glass-card store-empty">
+                        <h2>Loading products...</h2>
+                        <p>Please wait while the SkyCastBD store loads.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" aria-hidden="true" hidden>
+        <div class="checkout-modal-card glass-card">
+            <button class="modal-close" id="checkoutModalClose" type="button" aria-label="Close checkout modal">×</button>
+            <div class="checkout-header">
+                <span class="hero-badge">Manual Checkout</span>
+                <h2 id="checkoutTitle">Complete Your Order</h2>
+                <p>Selected: <strong id="selectedProductTitle">Product</strong> · <span id="selectedProductPrice">৳0</span></p>
+            </div>
+
+            <div class="checkout-product-description" aria-label="Selected product full description">
+                <h3>Product Details</h3>
+                <div id="selectedProductDescription" class="checkout-product-description-content"></div>
+            </div>
+
+            <div class="checkout-payment-box">
+                <h3>Send payment to one account</h3>
+                <div class="checkout-payment-grid">
+                    <div><strong>bKash</strong><span>01745334044</span></div>
+                    <div><strong>Nagad</strong><span>01745334044</span></div>
+                    <div><strong>DBBL</strong><span>7017319729155</span></div>
+                </div>
+            </div>
+
+            <form class="checkout-form" id="checkoutForm">
+                <input type="hidden" id="orderProductId" name="productId">
+                <input type="hidden" id="orderProductTitle" name="productTitle">
+                <div class="contact-field">
+                    <label for="customerName">Name</label>
+                    <input id="customerName" name="customerName" type="text" required minlength="2" maxlength="120" placeholder="Your full name">
+                </div>
+                <div class="contact-field">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" required minlength="6" maxlength="30" placeholder="01XXXXXXXXX">
+                </div>
+                <div class="contact-field full">
+                    <label for="shippingAddress">Shipping Address</label>
+                    <textarea id="shippingAddress" name="shippingAddress" required minlength="10" maxlength="500" placeholder="House, road, area, city"></textarea>
+                </div>
+                <div class="contact-field">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="bKash">bKash</option>
+                        <option value="Nagad">Nagad</option>
+                        <option value="DBBL">DBBL</option>
+                    </select>
+                </div>
+                <div class="contact-field">
+                    <label for="transactionId">Transaction ID</label>
+                    <input id="transactionId" name="transactionId" type="text" required minlength="4" maxlength="120" placeholder="Payment transaction ID">
+                </div>
+                <button class="primary-btn full" type="submit">Submit Order</button>
+            </form>
+            <p class="store-status" id="orderStatus" hidden></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SkyCastBD</h3>
+                <p>Premium weather forecasting for Bangladesh and beyond</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SkyCastBD. All rights reserved. Made with 🌦️ in Bangladesh</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/cms-api.js" defer></script>
+    <script src="../js/store.js" defer></script>
+</body>
+</html>

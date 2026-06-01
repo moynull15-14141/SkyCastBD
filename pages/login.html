@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Admin Login | SkyCastBD CMS</title>
+    <meta name="description" content="Secure SkyCastBD CMS administrator login.">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/cms.css">
+</head>
+<body class="cms-body">
+    <main class="cms-shell">
+        <section class="login-card" aria-labelledby="loginTitle">
+            <span class="cms-kicker">Secure CMS</span>
+            <h1 class="cms-heading" id="loginTitle">SkyCastBD Admin Login</h1>
+            <p class="cms-muted">Sign in with your administrator credentials to manage weather blog content and SEO settings.</p>
+
+            <form class="cms-form" id="loginForm" autocomplete="on">
+                <div class="cms-field">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" required minlength="3" maxlength="64" autocomplete="username" placeholder="admin">
+                </div>
+                <div class="cms-field">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" required minlength="8" autocomplete="current-password" placeholder="••••••••">
+                </div>
+                <button class="primary-btn" type="submit">Sign In</button>
+            </form>
+
+            <p class="cms-message" id="loginMessage" hidden></p>
+            <p class="cms-muted" style="margin-top: 1rem;"><a class="blog-card-link" href="../index.html">← Back to SkyCastBD</a></p>
+        </section>
+    </main>
+
+    <script src="../js/cms-api.js" defer></script>
+    <script src="../js/login.js" defer></script>
+</body>
+</html>

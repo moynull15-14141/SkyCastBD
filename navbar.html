@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkyCastBD - Premium Weather Platform with Glassmorphism Design">
+    <title>SkyCastBD - Premium Sticky Navbar</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <!-- Premium Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo Section -->
+            <div class="navbar-logo">
+                <a href="/index.html" class="logo-link" aria-label="SkyCastBD home">
+                    <span class="logo-text">SkyCastBD</span>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="navbar-menu" id="navbarMenu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#overview" class="nav-link active" data-section="overview">
+                            <span class="nav-icon">🏠</span>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#forecast" class="nav-link" data-section="forecast">
+                            <span class="nav-icon">📊</span>
+                            <span>Forecast</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cities" class="nav-link" data-section="cities">
+                            <span class="nav-icon">🌍</span>
+                            <span>Cities</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#quality" class="nav-link" data-section="quality">
+                            <span class="nav-icon">💨</span>
+                            <span>Air Quality</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#alerts" class="nav-link" data-section="alerts">
+                            <span class="nav-icon">🚨</span>
+                            <span>Alerts</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Section: Temperature Toggle & Mobile Menu -->
+            <div class="navbar-right">
+                <!-- Temperature Toggle -->
+                <div class="temp-toggle">
+                    <button class="temp-btn active" id="celsiusBtn" title="Celsius">°C</button>
+                    <span class="temp-divider">|</span>
+                    <button class="temp-btn" id="fahrenheitBtn" title="Fahrenheit">°F</button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span class="hamburger">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scrollIndicator"></div>
+    </nav>
+
+    <!-- Content Sections (Demo) -->
+    <div class="demo-content">
+        <section id="overview" class="demo-section">
+            <h1>Overview</h1>
+            <p>Welcome to SkyCastBD - Bangladesh's premium weather platform with cutting-edge glassmorphism design.</p>
+        </section>
+
+        <section id="forecast" class="demo-section">
+            <h1>7-Day Forecast</h1>
+            <p>Get accurate weather predictions for the next 7 days across Bangladesh.</p>
+        </section>
+
+        <section id="cities" class="demo-section">
+            <h1>Major Cities</h1>
+            <p>Track weather for Dhaka, Chittagong, Sylhet, Khulna, and more major cities.</p>
+        </section>
+
+        <section id="quality" class="demo-section">
+            <h1>Air Quality Index</h1>
+            <p>Monitor air quality and pollution levels in real-time across Bangladesh.</p>
+        </section>
+
+        <section id="alerts" class="demo-section">
+            <h1>Weather Alerts</h1>
+            <p>Stay updated with critical weather alerts and warnings for your area.</p>
+        </section>
+
+        <section class="demo-section">
+            <h1>More Content Below</h1>
+            <p>Scroll down to see the sticky navbar in action with glassmorphism effects and smooth animations.</p>
+        </section>
+
+        <section class="demo-section">
+            <h1>Bangladesh Weather Statistics</h1>
+            <p>SkyCastBD provides weather data for over 50+ cities across Bangladesh with real-time updates.</p>
+        </section>
+    </div>
+
+    <script src="navbar.js"></script>
+</body>
+</html>

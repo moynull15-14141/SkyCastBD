@@ -1,0 +1,44 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# API Keys (never commit!)
+config.js
+api-keys.js
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+.tmp/
+temp/
+cache/
+*.zip
+temp_delete_me.txt
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
